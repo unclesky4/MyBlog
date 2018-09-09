@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IT BLOG</title>
-    <link>hthttps://unclesky4.github.io/</link>
+    <link>https://unclesky4.github.io/</link>
     <description>Recent content on IT BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Sep 2018 17:36:15 +0800</lastBuildDate>
     
-	<atom:link href="hthttps://unclesky4.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://unclesky4.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shiro刷新权限</title>
-      <link>hthttps://unclesky4.github.io/javaee/shiro%E5%88%B7%E6%96%B0%E6%9D%83%E9%99%90/</link>
+      <link>https://unclesky4.github.io/javaee/shiro%E5%88%B7%E6%96%B0%E6%9D%83%E9%99%90/</link>
       <pubDate>Sun, 09 Sep 2018 17:36:15 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/javaee/shiro%E5%88%B7%E6%96%B0%E6%9D%83%E9%99%90/</guid>
+      <guid>https://unclesky4.github.io/javaee/shiro%E5%88%B7%E6%96%B0%E6%9D%83%E9%99%90/</guid>
       <description>自定义Realm添加如下代码：
  public void clearAuthz(){ this.clearCachedAuthorizationInfo(SecurityUtils.getSubject().getPrincipals()); } /** * shiro刷新权限 */ public static void reloadAuthorizing() { LoggerFactory.getLogger(This.class).info(&amp;quot;权限刷新成功&amp;quot;); RealmSecurityManager rsm = (RealmSecurityManager)SecurityUtils.getSecurityManager(); MyShiroRealm realm = (MyShiroRealm)rsm.getRealms().iterator().next(); realm.clearAuthz(); }  </description>
     </item>
     
     <item>
       <title>Java位运算</title>
-      <link>hthttps://unclesky4.github.io/java/java%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <link>https://unclesky4.github.io/java/java%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
       <pubDate>Sun, 09 Sep 2018 17:33:54 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/java/java%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <guid>https://unclesky4.github.io/java/java%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
       <description>1. 判断int型变量a是奇数还是偶数 a&amp;amp;1 = 0 偶数 a&amp;amp;1 = 1 奇数 2. 求平均值，比如有两个int类型变量x、y,首先要求x+y的和，再除以2，但是有可能x+y的结果会超过int的最大表示范围，所以位运算就派上用场啦。 (x&amp;amp;y)+((x^y)&amp;gt;&amp;gt;1); 3. 对于一个大于0的整数，判断它是不是2的几次方 ((x&amp;amp;(x-1))==0)&amp;amp;&amp;amp;(x!=0)； 4. 比如有两个int类型变量x、y,要求两者数字交换，位运算的实现方法：性能绝对高效 x ^= y; y ^= x; x ^= y; 5. 求绝对值 int abs( int x ) { int y ; y = x &amp;gt;&amp;gt; 31 ; return (x^y)-y ; //or: (x+y)^y } 6. 取模运算，采用位运算实现： a % (2^n) 等价于 a &amp;amp; (2^n - 1) 7. 乘法运算 采用位运算实现 a * (2^n) 等价于 a &amp;lt;&amp;lt; n 8.</description>
     </item>
     
     <item>
       <title>Mybatis用typeHandler处理enum类型</title>
-      <link>hthttps://unclesky4.github.io/javaee/mybatis%E7%94%A8typehandler%E5%A4%84%E7%90%86enum%E7%B1%BB%E5%9E%8B/</link>
+      <link>https://unclesky4.github.io/javaee/mybatis%E7%94%A8typehandler%E5%A4%84%E7%90%86enum%E7%B1%BB%E5%9E%8B/</link>
       <pubDate>Sun, 09 Sep 2018 17:26:44 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/javaee/mybatis%E7%94%A8typehandler%E5%A4%84%E7%90%86enum%E7%B1%BB%E5%9E%8B/</guid>
+      <guid>https://unclesky4.github.io/javaee/mybatis%E7%94%A8typehandler%E5%A4%84%E7%90%86enum%E7%B1%BB%E5%9E%8B/</guid>
       <description>如果想使用mybatis自带的枚举类处理，有2种方式，一个是EnumTypeHandler，一个是EnumOrdinalTypeHandler。 区别如下: EnumTypeHandler直接存储name值。它是mybatis默认的枚举类型转换器。 EnumOrdinalTypeHandler存储enum类里的序号值，此时数据库表字段一般对应用smallint/int类型的处理。 使用的时侯很简单，在insert或者update语句块，或者resultMap字段等地方指定相应的typeHandler即可。 &amp;lt;insert id=&amp;quot;insertUser&amp;quot; parameterType=&amp;quot;User&amp;quot;&amp;gt; insert into user(id,userName,status) values(#{id},#{userName},#{status,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler}) &amp;lt;/insert&amp;gt; 或 &amp;lt;resultMap id=&amp;quot;BaseResultMap&amp;quot; type=&amp;quot;User&amp;quot;&amp;gt; &amp;lt;id column=&amp;quot;id&amp;quot; property=&amp;quot;userId&amp;quot; jdbcType=&amp;quot;INTEGER&amp;quot; /&amp;gt; &amp;lt;result column=&amp;quot;status&amp;quot; property=&amp;quot;status&amp;quot; typeHandler=&amp;quot;org.apache.ibatis.type.EnumOrdinalTypeHandler&amp;quot;/&amp;gt; &amp;lt;/resultMap&amp;gt; 不过大多数情况下，想存储的并不是枚举的顺序号，而是存储自定义的id值，这时我们就需要自己写enum的处理类。 若程序中原来有一个枚举类，name是长沙、株洲、湘潭三地，value采用身份证上的地区编号。 public enum CityTest { ChangSha(4301),Zhuzhou(4302),Xiangtan(4303); int value; private CityTest(int value){ this.value=value; } public int getValue() { return this.value; } /*方法Value2CityTest是为了typeHandler后加的*/ public static CityTest Value2CityTest(int value) { for (CityTest citytest : CityTest.values()) { if (citytest.value == value) { return citytest; } } throw new IllegalArgumentException(&amp;quot;无效的value值: &amp;quot; + value + &amp;quot;!</description>
     </item>
     
     <item>
       <title>JsonConfig的使用</title>
-      <link>hthttps://unclesky4.github.io/java/jsonconfig%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <link>https://unclesky4.github.io/java/jsonconfig%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 09 Sep 2018 17:24:37 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/java/jsonconfig%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://unclesky4.github.io/java/jsonconfig%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>我们通常对一个Json串和Java对象进行互转时，经常会有选择性的过滤掉一些属性值，而json-lib包中的JsonConfig为我们提供了这种 功能，具体实现方法有以下几种。(1)建立JsonConfig实例，并配置属性排除列表,(2)用属性过滤器,(3)写一个自定义的 JsonBeanProcessor. 1. 实现JSONString接口的方法 public class Person implements JSONString { private String name; private String lastname; private Address address; // getters &amp;amp; setters public String toJSONString() { return &amp;quot;{name:&#39;&amp;quot;+name+&amp;quot;&#39;,lastname:&#39;&amp;quot;+lastname+&amp;quot;&#39;}&amp;quot;; } } 2.第二种方法通过jsonconfig实例，对包含和需要排除的属性进行方便的添加或删除 public class Person { private String name; private String lastname; private Address address; // getters &amp;amp; setters } JsonConfig jsonConfig = new JsonConfig(); jsonConfig.setExclusions( new String[]{&amp;quot;address&amp;quot;}); Person bean = new Person(&amp;quot;jack&amp;quot;,&amp;quot;li&amp;quot;); JSON json = JSONSerializer.toJSON(bean, jsonConfig); 3.</description>
     </item>
     
     <item>
       <title>Mplayer用法</title>
-      <link>hthttps://unclesky4.github.io/notes/mplayer%E7%94%A8%E6%B3%95/</link>
+      <link>https://unclesky4.github.io/notes/mplayer%E7%94%A8%E6%B3%95/</link>
       <pubDate>Sun, 09 Sep 2018 17:22:33 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/notes/mplayer%E7%94%A8%E6%B3%95/</guid>
+      <guid>https://unclesky4.github.io/notes/mplayer%E7%94%A8%E6%B3%95/</guid>
       <description>1，录音: mplayer mms://202.***.***.***/test.asf -dumpstream -dumpfile MyMovie.asf 可以把mms ,rtsp.http.ftp….等协议的视频流录制下来,保存为 MyMovie.asf 文件. 2,把mplayer可以播放的文件转化为avi格式： mencoder yourfile.rm -ovc copy -oac copy -o testOut.avi 3，如何转化为mp3文件： mplayer -vo null -ao pcm music.wmv lame -h audiodump.wav music.mp3 4， 如何把一个目录下所有图片转化为一个视频文件 mencoder /*.jpg -mf on:fps=25 -o output.avi -ovc divx4 5，如何用wget来看视频? wget ftp://micorsops.com/something.avi -O - | mplayer - 6，用mplayer播放rtp等使用tcp socket -rtsp-stream-over-tcp 7，mplayer播放带密码的地址 mplay rtsp://&amp;lt;username&amp;gt; :&amp;lt;password&amp;gt; @&amp;lt;hostname&amp;gt; :&amp;lt;etc.&amp;gt; 8，mplayer 无法播放某些rm的文件原因 Note that the LIVE555 Streaming Media libraries do not support RealAudio and/or RealVideo streams - even those described by a &amp;quot;rtsp://&amp;quot; URL - because these streams do not use RTP for transport.</description>
     </item>
     
     <item>
       <title>框架总结</title>
-      <link>hthttps://unclesky4.github.io/javaee/%E6%A1%86%E6%9E%B6%E6%80%BB%E7%BB%93/</link>
+      <link>https://unclesky4.github.io/javaee/%E6%A1%86%E6%9E%B6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 09 Sep 2018 17:17:41 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/javaee/%E6%A1%86%E6%9E%B6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://unclesky4.github.io/javaee/%E6%A1%86%E6%9E%B6%E6%80%BB%E7%BB%93/</guid>
       <description>Swagger2,sosoapi(接口文档在线生成)
 kafka,activemq(消息中间件)
 ehcache,redis(缓存)
@@ -97,10 +97,10 @@ protostuff,avro RPC类</description>
     
     <item>
       <title>Centos7笔记</title>
-      <link>hthttps://unclesky4.github.io/linux/centos7%E7%AC%94%E8%AE%B0/</link>
+      <link>https://unclesky4.github.io/linux/centos7%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 09 Sep 2018 16:58:38 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/linux/centos7%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://unclesky4.github.io/linux/centos7%E7%AC%94%E8%AE%B0/</guid>
       <description>centos最小好化安装没有ifconfig命令
  yum install net-tools
 ifconfig命令在net-tools软件包里
@@ -117,10 +117,10 @@ systemctl是最主要的工具。它融合service和chkconfig的功能于一体�
     
     <item>
       <title>Centos7桌面及开发必备软件</title>
-      <link>hthttps://unclesky4.github.io/linux/centos7%E6%A1%8C%E9%9D%A2%E5%8F%8A%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</link>
+      <link>https://unclesky4.github.io/linux/centos7%E6%A1%8C%E9%9D%A2%E5%8F%8A%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Sun, 09 Sep 2018 15:49:23 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/linux/centos7%E6%A1%8C%E9%9D%A2%E5%8F%8A%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</guid>
+      <guid>https://unclesky4.github.io/linux/centos7%E6%A1%8C%E9%9D%A2%E5%8F%8A%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6/</guid>
       <description>必备软件
  1. Ibus输入法软件
 2. FireFox浏览器
@@ -144,10 +144,10 @@ git config &amp;ndash;global user.</description>
     
     <item>
       <title>Centos7_Setting</title>
-      <link>hthttps://unclesky4.github.io/linux/centos7_setting/</link>
+      <link>https://unclesky4.github.io/linux/centos7_setting/</link>
       <pubDate>Sun, 09 Sep 2018 15:32:10 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/linux/centos7_setting/</guid>
+      <guid>https://unclesky4.github.io/linux/centos7_setting/</guid>
       <description>1.安装 - 自定义分区
  / ：根目录，合理使用并及时清理的话15G就够了，不过建议30G以上；
 swap ：与物理内存大小一致即可；
@@ -164,10 +164,10 @@ sudo yum install ntfs-3g
     
     <item>
       <title>Centos7 Mariadb的安装与配置</title>
-      <link>hthttps://unclesky4.github.io/database/centos7-mariadb%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+      <link>https://unclesky4.github.io/database/centos7-mariadb%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sun, 09 Sep 2018 15:09:18 +0800</pubDate>
       
-      <guid>hthttps://unclesky4.github.io/database/centos7-mariadb%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://unclesky4.github.io/database/centos7-mariadb%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
       <description>安装MariaDB
  安装命令
 yum -y install mariadb mariadb-server  安装完成MariaDB，首先启动MariaDB
