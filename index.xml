@@ -181,5 +181,14 @@ systemctl enable mariadb   安全设置
  Disallow root login remotely? [Y/n] &amp;lt;–是否禁止root远程登录,回车,</description>
     </item>
     
+    <item>
+      <title>Home</title>
+      <link>https://unclesky4.github.io/home/</link>
+      <pubDate>Sun, 09 Sep 2018 14:57:24 +0800</pubDate>
+      
+      <guid>https://unclesky4.github.io/home/</guid>
+      <description> 个人博客 </description>
+    </item>
+    
   </channel>
 </rss>
