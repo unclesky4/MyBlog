@@ -27,7 +27,7 @@
 <meta property="og:title" content="JsonConfig的使用" />
 <meta property="og:description" content="我们通常对一个Json串和Java对象进行互转时，经常会有选择性的过滤掉一些属性值，而json-lib包中的JsonConfig为我们提供了这种 功能，具体实现方法有以下几种。(1)建立JsonConfig实例，并配置属性排除列表,(2)用属性过滤器,(3)写一个自定义的 JsonBeanProcessor. 1. 实现JSONString接口的方法 public class Person implements JSONString { private String name; private String lastname; private Address address; // getters &amp; setters public String toJSONString() { return &quot;{name:&#39;&quot;&#43;name&#43;&quot;&#39;,lastname:&#39;&quot;&#43;lastname&#43;&quot;&#39;}&quot;; } } 2.第二种方法通过jsonconfig实例，对包含和需要排除的属性进行方便的添加或删除 public class Person { private String name; private String lastname; private Address address; // getters &amp; setters } JsonConfig jsonConfig = new JsonConfig(); jsonConfig.setExclusions( new String[]{&quot;address&quot;}); Person bean = new Person(&quot;jack&quot;,&quot;li&quot;); JSON json = JSONSerializer.toJSON(bean, jsonConfig); 3." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://unclesky4.github.io/java/jsonconfig%E7%9A%84%E4%BD%BF%E7%94%A8/" /><meta property="article:published_time" content="2018-09-09T17:24:37&#43;08:00"/>
+<meta property="og:url" content="https://unclesky4.github.io/java/jsonconfig%E7%9A%84%E4%BD%BF%E7%94%A8/" /><meta property="article:published_time" content="2018-09-09T17:24:37&#43;08:00"/>
 <meta property="article:modified_time" content="2018-09-09T17:24:37&#43;08:00"/>
 
     
@@ -55,7 +55,7 @@
   <div class="container ">
     <div class="sidebar-about">
       <span class="site__title">
-        <a href="http://unclesky4.github.io/">IT BLOG</a>
+        <a href="https://unclesky4.github.io/">IT BLOG</a>
       </span>
       
       <p class="site__description">
