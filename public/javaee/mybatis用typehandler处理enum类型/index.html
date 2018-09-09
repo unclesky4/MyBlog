@@ -27,7 +27,7 @@
 <meta property="og:title" content="Mybatis用typeHandler处理enum类型" />
 <meta property="og:description" content="如果想使用mybatis自带的枚举类处理，有2种方式，一个是EnumTypeHandler，一个是EnumOrdinalTypeHandler。 区别如下: EnumTypeHandler直接存储name值。它是mybatis默认的枚举类型转换器。 EnumOrdinalTypeHandler存储enum类里的序号值，此时数据库表字段一般对应用smallint/int类型的处理。 使用的时侯很简单，在insert或者update语句块，或者resultMap字段等地方指定相应的typeHandler即可。 &lt;insert id=&quot;insertUser&quot; parameterType=&quot;User&quot;&gt; insert into user(id,userName,status) values(#{id},#{userName},#{status,typeHandler=org.apache.ibatis.type.EnumOrdinalTypeHandler}) &lt;/insert&gt; 或 &lt;resultMap id=&quot;BaseResultMap&quot; type=&quot;User&quot;&gt; &lt;id column=&quot;id&quot; property=&quot;userId&quot; jdbcType=&quot;INTEGER&quot; /&gt; &lt;result column=&quot;status&quot; property=&quot;status&quot; typeHandler=&quot;org.apache.ibatis.type.EnumOrdinalTypeHandler&quot;/&gt; &lt;/resultMap&gt; 不过大多数情况下，想存储的并不是枚举的顺序号，而是存储自定义的id值，这时我们就需要自己写enum的处理类。 若程序中原来有一个枚举类，name是长沙、株洲、湘潭三地，value采用身份证上的地区编号。 public enum CityTest { ChangSha(4301),Zhuzhou(4302),Xiangtan(4303); int value; private CityTest(int value){ this.value=value; } public int getValue() { return this.value; } /*方法Value2CityTest是为了typeHandler后加的*/ public static CityTest Value2CityTest(int value) { for (CityTest citytest : CityTest.values()) { if (citytest.value == value) { return citytest; } } throw new IllegalArgumentException(&quot;无效的value值: &quot; &#43; value &#43; &quot;!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://unclesky4.github.io/javaee/mybatis%E7%94%A8typehandler%E5%A4%84%E7%90%86enum%E7%B1%BB%E5%9E%8B/" /><meta property="article:published_time" content="2018-09-09T17:26:44&#43;08:00"/>
+<meta property="og:url" content="http://unclesky4.github.io/javaee/mybatis%E7%94%A8typehandler%E5%A4%84%E7%90%86enum%E7%B1%BB%E5%9E%8B/" /><meta property="article:published_time" content="2018-09-09T17:26:44&#43;08:00"/>
 <meta property="article:modified_time" content="2018-09-09T17:26:44&#43;08:00"/>
 
     
@@ -55,7 +55,7 @@
   <div class="container ">
     <div class="sidebar-about">
       <span class="site__title">
-        <a href="https://unclesky4.github.io/">IT BLOG</a>
+        <a href="http://unclesky4.github.io/">IT BLOG</a>
       </span>
       
       <p class="site__description">
