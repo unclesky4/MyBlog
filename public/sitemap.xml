@@ -53,6 +53,11 @@
   </url>
   
   <url>
+    <loc>https://unclesky4.github.io/home/</loc>
+    <lastmod>2018-09-09T14:57:24+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://unclesky4.github.io/categories/</loc>
   </url>
   
@@ -62,13 +67,13 @@
   </url>
   
   <url>
-    <loc>https://unclesky4.github.io/categories/dev/</loc>
+    <loc>https://unclesky4.github.io/tags/dev/</loc>
     <lastmod>2018-09-09T17:22:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://unclesky4.github.io/tags/dev/</loc>
+    <loc>https://unclesky4.github.io/categories/dev/</loc>
     <lastmod>2018-09-09T17:22:33+08:00</lastmod>
     <priority>0</priority>
   </url>
