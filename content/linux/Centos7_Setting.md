@@ -7,7 +7,7 @@ lastmod: 2018-09-09T15:32:10+08:00
 layout: post
 type:  "post"
 highlight: false
-draft: true
+draft: false
 ---
 
 > 1.安装 - 自定义分区

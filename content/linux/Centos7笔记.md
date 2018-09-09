@@ -7,7 +7,7 @@ categories : [ "dev" ]
 layout: post
 type:  "post"
 highlight: false
-draft: true
+draft: false
 ---
 
 > centos最小好化安装没有ifconfig命令

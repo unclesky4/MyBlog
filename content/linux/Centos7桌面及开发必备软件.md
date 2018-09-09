@@ -7,7 +7,7 @@ lastmod: 2018-09-09T15:49:23+08:00
 layout: post
 type:  "post"
 highlight: false
-draft: true
+draft: false
 ---
 
 > 必备软件
